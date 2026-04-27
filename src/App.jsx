@@ -32,9 +32,9 @@ function App() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
       smoothWheel: true,
-      smoothTouch: true, // Enable smooth scrolling on touch devices
-      syncTouch: true,
-      touchMultiplier: 2,
+      smoothTouch: false, // Disabled smooth scrolling on touch devices for native feel
+      syncTouch: false,
+      touchMultiplier: 1,
     });
 
     // Sync Lenis with GSAP
