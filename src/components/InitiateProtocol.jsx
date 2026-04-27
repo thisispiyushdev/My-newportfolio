@@ -53,7 +53,7 @@ export default function InitiateProtocol() {
     <section 
       id="initiate-protocol" 
       ref={containerRef} 
-      className="relative min-h-[80vh] w-full bg-obsidian text-white flex flex-col items-center justify-center p-6 md:p-12 overflow-hidden border-t border-white/5"
+      className="relative min-h-[80vh] w-full bg-transparent text-white flex flex-col items-center justify-center p-6 md:p-12 overflow-hidden border-t border-white/5"
     >
       {/* Background Matrix/Grid Ambience */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20"

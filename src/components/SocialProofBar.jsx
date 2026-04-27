@@ -12,7 +12,7 @@ export default function SocialProofBar() {
   const renderStats = [...stats, ...stats, ...stats];
 
   return (
-    <section className="w-full bg-obsidian py-12 md:py-24 border-y border-white/5 overflow-hidden relative">
+    <section className="w-full bg-transparent py-12 md:py-24 border-y border-white/5 overflow-hidden relative">
       {/* Edge Fades */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-obsidian to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-obsidian to-transparent z-10 pointer-events-none" />

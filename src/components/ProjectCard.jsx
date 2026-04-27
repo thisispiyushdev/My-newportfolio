@@ -7,7 +7,7 @@ const ProjectCard = ({ project, onClick }) => {
       className="project-card w-full group perspective-1000 h-[450px] mx-auto cursor-pointer"
       onClick={onClick}
     >
-      <div className="relative w-full h-full rounded-2xl overflow-hidden bg-obsidian border border-white/10 shadow-xl transition-all duration-500 hover:border-blue-500/40 hover:shadow-blue-500/10 hover:-translate-y-2 flex flex-col">
+      <div className="relative w-full h-full rounded-2xl overflow-hidden bg-obsidian/30 backdrop-blur-md border border-white/10 shadow-xl transition-all duration-500 hover:border-blue-500/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] hover:-translate-y-2 flex flex-col">
         
         {/* Glow Effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-blue-500/10 via-transparent to-transparent transition-opacity duration-500 pointer-events-none z-0"></div>

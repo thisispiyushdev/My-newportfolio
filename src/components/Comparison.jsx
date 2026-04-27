@@ -9,20 +9,39 @@ export default function Comparison() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        '.comp-row',
-        { opacity: 0, x: -20 },
-        {
-          opacity: 1, 
-          x: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 75%',
-          }
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 80%',
         }
+      });
+
+      // 1. Animate headers
+      tl.fromTo(
+        '.comp-heading',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
+      )
+      // 2. Animate the main table wrapper
+      .fromTo(
+        '.comp-table',
+        { opacity: 0, y: 50, scale: 0.98 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out' },
+        '-=0.4'
+      )
+      // 3. Fade in table header
+      .fromTo(
+        '.comp-table-header',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5 },
+        '-=0.4'
+      )
+      // 4. Slide in each row with a stagger
+      .fromTo(
+        '.comp-row',
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: 'back.out(1.2)' },
+        '-=0.2'
       );
     }, sectionRef);
 
@@ -55,17 +74,17 @@ export default function Comparison() {
   return (
     <section id="why-me" ref={sectionRef} className="py-24 px-6 md:px-16 w-full max-w-5xl mx-auto">
       <div className="mb-16">
-        <h2 className="text-sm font-mono tracking-widest text-champagne uppercase mb-4">The Delta</h2>
-        <h3 className="text-4xl md:text-5xl font-drama font-bold">Why I Am Different</h3>
-        <p className="mt-4 text-slate-400 font-sans max-w-2xl text-sm leading-relaxed">
+        <h2 className="comp-heading text-sm font-mono tracking-widest text-champagne uppercase mb-4">The Delta</h2>
+        <h3 className="comp-heading text-4xl md:text-5xl font-drama font-bold">Why I Am Different</h3>
+        <p className="comp-heading mt-4 text-slate-400 font-sans max-w-2xl text-sm leading-relaxed">
           The difference between a developer and an architect is foresight. I don't just build features; I engineer resilient ecosystems.
         </p>
       </div>
 
-      <div className="w-full flex flex-col border border-white/10 rounded-3xl bg-slate/20 overflow-hidden shadow-2xl backdrop-blur-sm">
+      <div className="comp-table w-full flex flex-col border border-white/10 rounded-3xl bg-slate/20 overflow-hidden shadow-2xl backdrop-blur-sm">
         
         {/* Table Header */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 border-b border-white/10 bg-obsidian/80">
+        <div className="comp-table-header grid grid-cols-1 md:grid-cols-12 gap-4 p-6 border-b border-white/10 bg-obsidian/80">
           <div className="md:col-span-3 font-mono text-xs tracking-widest text-slate-500 uppercase">Focus Area</div>
           <div className="hidden md:block md:col-span-4 font-mono text-xs tracking-widest text-slate-500 uppercase">Standard Developer</div>
           <div className="hidden md:block md:col-span-5 font-mono text-xs tracking-widest text-champagne uppercase font-bold">Piyush (Architect)</div>

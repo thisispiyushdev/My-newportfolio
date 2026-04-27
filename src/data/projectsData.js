@@ -1,10 +1,13 @@
 import githubUserImg from '../assets/work_logo/github_user.png';
-import samikaranImg from '../assets/company_logo/samikaran.png';
+import samikaranImg from '../assets/work_logo/samikarn1.png';
 import portfolioImg from '../assets/work_logo/portfolio.png';
 import moodImg from '../assets/work_logo/MOOD.png';
 import foodDictatorImg from '../assets/work_logo/food_dictator.png';
 import weatherImg from '../assets/work_logo/weather.png';
 import auraImg from '../assets/work_logo/AURA.png';
+import nexxtechsProjImg from '../assets/work_logo/nexxtechss.png';
+import serverlessImg from '../assets/work_logo/serverless.png';
+import cryptoImg from '../assets/work_logo/crypto.jpg';
 
 export const projectsData = [
   {
@@ -53,12 +56,30 @@ export const projectsData = [
     githubLink: 'https://github.com/Piyush232005/Aura-Realtime-Ai-App.git'
   },
   {
-    id: 'weather-app',
-    title: 'Weather App',
-    image: weatherImg,
-    shortDescription: 'A creative weather application with dynamic animations.',
-    fullDescription: 'The official website for Weather app, a creative. Built using HTML, CSS, and JavaScript and React.js, it features visually appealing animations and a clean design to showcase the right weather according to the city where user searches.',
-    techStack: ['React JS', 'CSS', 'API', 'Tailwind CSS', 'GSAP'],
-    githubLink: 'https://github.com/Piyush232005/Weatherdoxxx.git'
+    id: 'nexxtech-website',
+    title: 'Nexxtech Website',
+    image: nexxtechsProjImg,
+    shortDescription: 'Modern educational platform and landing page for Nexxtechs.',
+    fullDescription: 'The official website for Nexxtechs. Built with a focus on modern UI/UX principles, the platform provides seamless navigation, engaging animations, and a professional dark-themed aesthetic to showcase the future of AI and Tech Education. It includes an integrated enquiry system and detailed course roadmaps.',
+    techStack: ['React JS', 'Tailwind CSS', 'GSAP', 'Node.js'],
+    githubLink: 'https://www.nexxtechs.com'
+  },
+  {
+    id: 'crypto-price-alert',
+    title: 'AWS Crypto Price Alert',
+    image: cryptoImg,
+    shortDescription: 'Serverless crypto price tracking and alerting system using AWS.',
+    fullDescription: 'A highly scalable, serverless application built on AWS to track cryptocurrency prices. Flow: An Amazon EventBridge rule triggers an AWS Lambda function at regular intervals. The Lambda function securely fetches real-time price data from a public Crypto API. If the price crosses a predefined threshold, Lambda publishes a message to an Amazon SNS topic, which instantly sends an email or SMS alert to the subscribed user. This ensures zero idle server costs and high reliability.',
+    techStack: ['AWS Lambda', 'Amazon SNS', 'EventBridge', 'Node.js', 'External APIs'],
+    githubLink: 'https://github.com/Piyush232005/Crypto-price-check'
+  },
+  {
+    id: 'aws-serverless-framework',
+    title: 'AWS Serverless Architecture',
+    image: serverlessImg,
+    shortDescription: 'Event-driven serverless framework integrating multiple AWS services.',
+    fullDescription: 'A robust serverless backend architecture demonstrating proper AWS service integration. Flow: The user makes an HTTP request via Amazon API Gateway, which securely routes the request to an AWS Lambda function. The Lambda function acts as the core business logic layer, interacting with Amazon DynamoDB for fast NoSQL data storage and Amazon S3 for secure object storage. All application logs and metrics are continuously monitored using Amazon CloudWatch, ensuring deep observability and security via IAM roles.',
+    techStack: ['API Gateway', 'AWS Lambda', 'DynamoDB', 'Amazon S3', 'CloudWatch', 'IAM'],
+    githubLink: 'https://github.com/Piyush232005/Crypto-price-check'
   }
 ];

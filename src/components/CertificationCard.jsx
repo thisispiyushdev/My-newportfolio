@@ -4,6 +4,7 @@ import saa from '../assets/certificate_page/saa.jpg';
 import oracle from '../assets/certificate_page/oracle.jpg';
 import devops from '../assets/certificate_page/devops.jpg';
 import fullstack from '../assets/certificate_page/fullstack.jpg';
+import nptel from '../assets/certificate_page/nptel.jpeg';
 
 export const certificationsData = [
   {
@@ -49,13 +50,24 @@ export const certificationsData = [
     image:
       fullstack,
     year: "2025 to 2028",
+  },
+  {
+    id: 5,
+    title: "NPTEL Certification",
+    provider: "IIT / NPTEL",
+    category: "Technical Achievement",
+    description:
+      "Successfully completed the NPTEL certification course, demonstrating a strong understanding of fundamental engineering concepts and continuous learning methodologies.",
+    image:
+      nptel,
+    year: "2024 to 2026",
   }
 ];
 
 const CertificationCard = ({ cert, onClick }) => {
   return (
     <div className="w-full group perspective-1000 h-[500px] md:h-[600px] mx-auto">
-      <div className="relative w-full h-full rounded-3xl overflow-hidden bg-obsidian border border-white/10 shadow-2xl transition-all duration-500 hover:border-emerald-500/30 flex flex-col">
+      <div className="relative w-full h-full rounded-3xl overflow-hidden bg-obsidian/30 backdrop-blur-md border border-white/10 shadow-2xl transition-all duration-500 hover:border-emerald-500/30 flex flex-col">
         
         {/* Top Image Section */}
         <div className="w-full h-48 md:h-64 relative overflow-hidden flex-shrink-0">

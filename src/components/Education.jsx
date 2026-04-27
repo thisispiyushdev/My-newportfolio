@@ -81,7 +81,7 @@ export default function Education() {
     <section 
       id="education" 
       ref={containerRef} 
-      className="relative w-full min-h-screen bg-obsidian py-24 md:py-32 px-6 md:px-16 overflow-hidden flex flex-col items-center"
+      className="relative w-full min-h-screen bg-transparent py-24 md:py-32 px-6 md:px-16 overflow-hidden flex flex-col items-center"
     >
       
       {/* Background Decor Elements matching section aesthetic (Blue/Cyan for Education) */}

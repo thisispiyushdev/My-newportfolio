@@ -59,7 +59,7 @@ export default function Philosophy() {
   };
 
   return (
-    <section id="philosophy" ref={sectionRef} className="relative w-full py-32 md:py-48 bg-obsidian overflow-hidden border-y border-white/5">
+    <section id="philosophy" ref={sectionRef} className="relative w-full py-32 md:py-48 bg-transparent overflow-hidden border-y border-white/5">
       {/* Parallax Background Texture */}
       <div 
         ref={bgRef}
