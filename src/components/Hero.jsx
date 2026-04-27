@@ -1,11 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { Typewriter } from 'react-simple-typewriter';
 import myImg from '../assets/my.png';
 import MagneticWrapper from './MagneticWrapper';
+import ContactForm from './ContactForm';
 
 export default function Hero() {
   const containerRef = useRef(null);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   useEffect(() => {
     // GSAP Massive Text Animations
@@ -84,7 +86,7 @@ export default function Hero() {
             I orchestrate high-performance distributed systems on AWS and craft immersive, human-centric web experiences.
           </p>
           
-          <div className="hero-sub-el mt-10 md:mt-12">
+          <div className="hero-sub-el mt-10 md:mt-12 flex flex-col sm:flex-row items-center gap-4 md:gap-6">
             <MagneticWrapper>
               <a
                 href="https://drive.google.com/file/d/1gxVMky6WeRPBfELyTVDn0k1mi4UwV3-q/view?usp=sharing"
@@ -95,6 +97,16 @@ export default function Hero() {
               >
                 DOWNLOAD CV
               </a>
+            </MagneticWrapper>
+
+            <MagneticWrapper>
+              <button
+                onClick={() => setIsFormOpen(true)}
+                data-cursor="interactive"
+                className="inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 rounded-full border border-[#d4af37]/50 text-[#d4af37] font-mono text-xs md:text-sm tracking-widest font-bold hover:bg-[#d4af37]/10 transition-colors duration-300"
+              >
+                LET'S TALK
+              </button>
             </MagneticWrapper>
           </div>
         </div>
@@ -110,6 +122,8 @@ export default function Hero() {
         </div>
         
       </div>
+
+      {isFormOpen && <ContactForm onClose={() => setIsFormOpen(false)} />}
     </section>
   );
 }

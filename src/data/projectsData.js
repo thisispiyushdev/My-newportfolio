@@ -11,12 +11,39 @@ import cryptoImg from '../assets/work_logo/crypto.jpg';
 
 export const projectsData = [
   {
+    id: 'nexxtech-website',
+    title: 'Nexxtech Website',
+    image: nexxtechsProjImg,
+    shortDescription: 'Modern educational platform and landing page for Nexxtechs.',
+    fullDescription: 'The official website for Nexxtechs. Built with a focus on modern UI/UX principles, the platform provides seamless navigation, engaging animations, and a professional dark-themed aesthetic to showcase the future of AI and Tech Education. It includes an integrated enquiry system and detailed course roadmaps.',
+    techStack: ['React JS', 'Tailwind CSS', 'GSAP', 'Node.js', 'Express JS', 'Supabase', 'Docker'],
+    githubLink: 'https://www.nexxtechs.com'
+  },
+  {
+    id: 'crypto-price-alert',
+    title: 'AWS Crypto Price Alert',
+    image: cryptoImg,
+    shortDescription: 'Serverless crypto price tracking and alerting system using AWS.',
+    fullDescription: 'A highly scalable, serverless application built on AWS to track cryptocurrency prices. Flow: An Amazon EventBridge rule triggers an AWS Lambda function at regular intervals. The Lambda function securely fetches real-time price data from a public Crypto API. If the price crosses a predefined threshold, Lambda publishes a message to an Amazon SNS topic, which instantly sends an email or SMS alert to the subscribed user. This ensures zero idle server costs and high reliability.',
+    techStack: ['AWS Lambda', 'Amazon SNS', 'EventBridge', 'Node.js', 'External APIs'],
+    githubLink: 'https://github.com/Piyush232005/Crypto-price-check'
+  },
+  {
+    id: 'aws-serverless-framework',
+    title: 'AWS Serverless Architecture',
+    image: serverlessImg,
+    shortDescription: 'Event-driven serverless framework integrating multiple AWS services.',
+    fullDescription: 'A robust serverless backend architecture demonstrating proper AWS service integration. Flow: The user makes an HTTP request via Amazon API Gateway, which securely routes the request to an AWS Lambda function. The Lambda function acts as the core business logic layer, interacting with Amazon DynamoDB for fast NoSQL data storage and Amazon S3 for secure object storage. All application logs and metrics are continuously monitored using Amazon CloudWatch, ensuring deep observability and security via IAM roles.',
+    techStack: ['API Gateway', 'AWS Lambda', 'DynamoDB', 'Amazon S3', 'CloudWatch', 'IAM'],
+    githubLink: 'https://github.com/Piyush232005/Crypto-price-check'
+  },
+  {
     id: 'Samikaran-ngo',
     title: 'Samikaran NGO',
     image: samikaranImg,
     shortDescription: 'A full-stack web platform for an NGO with donation support.',
     fullDescription: 'A full-stack web application designed for the Samikaran NGO to showcase their mission, activities, volunteering options, and donation support. Built with a clean UI/UX and integrated with robust backend services for managing contributions.',
-    techStack: ['React', 'Node.js', 'Express', 'MongoDB'],
+    techStack: ['React JS', 'Node.js', 'Express JS', 'MongoDB', 'Supabase', 'Docker'],
     githubLink: 'https://github.com/Piyush232005/Project-samikaran.git'
   },
   {
@@ -43,7 +70,7 @@ export const projectsData = [
     image: moodImg,
     shortDescription: 'An emotion recognition web application using Face API.js.',
     fullDescription: 'This project made with help of of MERN stack technology with Face Api.js. The AI Mood Detection web application is designed to analyze facial expressions and accurately determine the user\'s current emotional state, such as happiness, sadness, or surprise.',
-    techStack: ['React JS', 'Node.js', 'Express', 'Face API.js'],
+    techStack: ['React JS', 'Node.js', 'Express JS', 'Face API.js', 'Supabase', 'Docker'],
     githubLink: 'https://github.com/Piyush232005/Mood-listner.git'
   },
   {
@@ -52,34 +79,7 @@ export const projectsData = [
     image: auraImg,
     shortDescription: 'A proper chatbot with scalable architecture and real-time features.',
     fullDescription: 'Aura is an advanced, real-time AI companion designed to understand and anticipate your needs. Utilizing cutting-edge behavioral intelligence, Aura instantly adapts to offer seamless, proactive support—from prioritizing your inbox to optimizing your daily schedule—making every conversation smarter and every task simpler.',
-    techStack: ['React JS', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
+    techStack: ['React JS', 'Node.js', 'MongoDB', 'Express JS', 'Tailwind', 'Supabase', 'Docker'],
     githubLink: 'https://github.com/Piyush232005/Aura-Realtime-Ai-App.git'
-  },
-  {
-    id: 'nexxtech-website',
-    title: 'Nexxtech Website',
-    image: nexxtechsProjImg,
-    shortDescription: 'Modern educational platform and landing page for Nexxtechs.',
-    fullDescription: 'The official website for Nexxtechs. Built with a focus on modern UI/UX principles, the platform provides seamless navigation, engaging animations, and a professional dark-themed aesthetic to showcase the future of AI and Tech Education. It includes an integrated enquiry system and detailed course roadmaps.',
-    techStack: ['React JS', 'Tailwind CSS', 'GSAP', 'Node.js'],
-    githubLink: 'https://www.nexxtechs.com'
-  },
-  {
-    id: 'crypto-price-alert',
-    title: 'AWS Crypto Price Alert',
-    image: cryptoImg,
-    shortDescription: 'Serverless crypto price tracking and alerting system using AWS.',
-    fullDescription: 'A highly scalable, serverless application built on AWS to track cryptocurrency prices. Flow: An Amazon EventBridge rule triggers an AWS Lambda function at regular intervals. The Lambda function securely fetches real-time price data from a public Crypto API. If the price crosses a predefined threshold, Lambda publishes a message to an Amazon SNS topic, which instantly sends an email or SMS alert to the subscribed user. This ensures zero idle server costs and high reliability.',
-    techStack: ['AWS Lambda', 'Amazon SNS', 'EventBridge', 'Node.js', 'External APIs'],
-    githubLink: 'https://github.com/Piyush232005/Crypto-price-check'
-  },
-  {
-    id: 'aws-serverless-framework',
-    title: 'AWS Serverless Architecture',
-    image: serverlessImg,
-    shortDescription: 'Event-driven serverless framework integrating multiple AWS services.',
-    fullDescription: 'A robust serverless backend architecture demonstrating proper AWS service integration. Flow: The user makes an HTTP request via Amazon API Gateway, which securely routes the request to an AWS Lambda function. The Lambda function acts as the core business logic layer, interacting with Amazon DynamoDB for fast NoSQL data storage and Amazon S3 for secure object storage. All application logs and metrics are continuously monitored using Amazon CloudWatch, ensuring deep observability and security via IAM roles.',
-    techStack: ['API Gateway', 'AWS Lambda', 'DynamoDB', 'Amazon S3', 'CloudWatch', 'IAM'],
-    githubLink: 'https://github.com/Piyush232005/Crypto-price-check'
   }
 ];
