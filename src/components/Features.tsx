@@ -107,10 +107,47 @@ function TelemetryTypewriter() {
 // --- Card 3: Signal Graph --- //
 function SignalGraph() {
   return (
-    <div className="flex-1 min-h-[140px] flex flex-col justify-end pt-4">
-      <p className="font-mono text-[10px] text-slate-500 dark:text-slate-400 mb-2 tracking-widest uppercase">CI/CD PIPELINE EFFICIENCY</p>
-      <div className="relative w-full h-full flex-1">
-        <svg viewBox="0 0 100 40" className="w-full h-full overflow-visible">
+    <div className="flex-1 min-h-[160px] flex flex-col justify-end pt-4">
+      <p className="font-mono text-[10px] text-slate-500 dark:text-slate-400 mb-3 tracking-widest uppercase">CI/CD PIPELINE EFFICIENCY</p>
+      <div className="relative w-full h-[80px]">
+        <svg viewBox="0 0 100 40" className="w-full h-full overflow-visible" preserveAspectRatio="none">
+          <defs>
+            {/* Area Gradient */}
+            <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#00f0ff" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#00f0ff" stopOpacity="0.0" />
+            </linearGradient>
+            {/* Glow Filter */}
+            <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="1.2" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          {/* Background Grid Lines */}
+          <line x1="0" y1="10" x2="100" y2="10" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+          <line x1="0" y1="20" x2="100" y2="20" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+          <line x1="0" y1="30" x2="100" y2="30" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+          
+          <line x1="20" y1="0" x2="20" y2="40" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+          <line x1="40" y1="0" x2="40" y2="40" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+          <line x1="60" y1="0" x2="60" y2="40" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+          <line x1="80" y1="0" x2="80" y2="40" stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" strokeDasharray="2 2" />
+
+          {/* Filled Area under the path */}
+          <motion.path
+            initial={{ pathLength: 0, opacity: 0 }}
+            whileInView={{ pathLength: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.8, ease: 'easeOut', delay: 0.2 }}
+            d="M 0 35 L 20 25 L 40 30 L 60 10 L 80 15 L 100 5 L 100 40 L 0 40 Z"
+            fill="url(#graphGradient)"
+          />
+
+          {/* Neon Path */}
           <motion.path 
             initial={{ pathLength: 0 }}
             whileInView={{ pathLength: 1 }}
@@ -118,19 +155,27 @@ function SignalGraph() {
             transition={{ duration: 2.0, ease: 'easeOut', delay: 0.3 }}
             d="M 0 35 L 20 25 L 40 30 L 60 10 L 80 15 L 100 5" 
             fill="none" 
-            className="stroke-cyan-500 dark:stroke-cyan-400"
-            strokeWidth="1.5"
+            stroke="#00f0ff"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            filter="url(#neonGlow)"
           />
+
+          {/* Dots on Vertices */}
           {[
             {x:0, y:35}, {x:20, y:25}, {x:40, y:30}, {x:60, y:10}, {x:80, y:15}, {x:100, y:5}
           ].map((pt, i) => (
              <circle 
                key={i} 
-               cx={pt.x} cy={pt.y} r="2.5" 
-               className="fill-slate-100 dark:fill-obsidian stroke-cyan-500 dark:stroke-cyan-400 stroke-2 animate-pulse"
-               style={{ animationDelay: `${i * 0.2}s` }}
+               cx={pt.x} 
+               cy={pt.y} 
+               r="3" 
+               fill="#030307"
+               stroke="#00f0ff"
+               strokeWidth="1.5"
+               className="animate-pulse"
+               style={{ animationDelay: `${i * 0.2}s`, transformOrigin: `${pt.x}px ${pt.y}px` }}
              />
           ))}
         </svg>
