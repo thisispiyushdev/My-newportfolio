@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,9 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        obsidian: '#080810',
+        obsidian: '#030307',
         champagne: '#C9A84C',
-        slate: '#1E1E2E',
+        nightslate: '#0d0d18',
+        cyberlime: '#cbff00',
+        electricpurple: '#9d4edd',
+        cyan: '#00f0ff',
       },
       fontFamily: {
         drama: ['"Cormorant Garamond"', 'serif'],
@@ -19,16 +23,26 @@ export default {
       keyframes: {
         'scroll-left': {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-33.3333%)' }, // scroll 1/3 since there are 3 copies
+          '100%': { transform: 'translateX(-33.3333%)' },
         },
         'scroll-right': {
           '0%': { transform: 'translateX(-33.3333%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-15px) rotate(2deg)' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.8' },
         }
       },
       animation: {
         'scroll-left': 'scroll-left 30s linear infinite',
         'scroll-right': 'scroll-right 30s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
       }
     },
   },

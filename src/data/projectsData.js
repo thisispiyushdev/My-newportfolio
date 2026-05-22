@@ -2,8 +2,6 @@ import githubUserImg from '../assets/work_logo/github_user.png';
 import samikaranImg from '../assets/work_logo/samikarn1.png';
 import portfolioImg from '../assets/work_logo/portfolio.png';
 import moodImg from '../assets/work_logo/MOOD.png';
-import foodDictatorImg from '../assets/work_logo/food_dictator.png';
-import weatherImg from '../assets/work_logo/weather.png';
 import auraImg from '../assets/work_logo/AURA.png';
 import nexxtechsProjImg from '../assets/work_logo/nexxtechss.png';
 import serverlessImg from '../assets/work_logo/serverless.png';
