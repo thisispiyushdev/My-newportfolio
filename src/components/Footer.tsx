@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 font-mono tracking-wide">
             <h4 className="text-white font-bold mb-4">Connect</h4>
             <div className="flex items-center gap-6">
-              <a href="https://github.com/Piyush232005" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-white hover:scale-110 transition-all duration-300">
+              <a href="https://github.com/thisispiyushdev" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-white hover:scale-110 transition-all duration-300">
                 <Github size={24} />
               </a>
               <a href="https://twitter.com/decoder_mherwal" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-[#1DA1F2] hover:scale-110 transition-all duration-300">
